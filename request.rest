@@ -1,0 +1,24 @@
+# -- EXTENSION USED FOR TESTING REST API REQUESTS --
+# --------------------------------------------------
+# Id: humao.rest-client
+# Description: REST Client for Visual Studio Code
+# Version: 0.25.1
+# Publisher: Huachao Mao
+# VS Marketplace Link: https://marketplace.visualstudio.com/items?itemName=humao.rest-client
+# --------------------------------------------------
+
+### GET Products
+GET http://localhost:5000/products
+
+### GET Product by ID
+GET http://localhost:5000/products/1
+
+### POST Create Product
+POST http://localhost:5000/products
+Content-Type: application/json
+
+{
+    "name": "Product 1",
+    "price": 100,
+    "description": "This is product 1"
+}
