@@ -5,4 +5,13 @@ export const storeProductValidation = [
   body("name").notEmpty().isString().withMessage("Name is required"),
   body("price").notEmpty().withMessage("Price is required"),
   body("description").notEmpty().withMessage("Description is required"),
+  body("image").optional(),
+];
+
+// Validasi untuk memperbarui produk
+export const updateProductValidation = [
+  body("name").notEmpty().isString().withMessage("Name is required"),
+  body("price").notEmpty().withMessage("Price is required"),
+  body("description").notEmpty().withMessage("Description is required"),
+  body("image").optional(),
 ];
