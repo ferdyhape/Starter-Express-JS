@@ -5,6 +5,8 @@ import bodyParser from "body-parser";
 
 // import routes
 import productRoute from "./routes/productRoute.js";
+import authRoute from "./routes/authRoute.js";
+import { authenticateToken } from "./middlewares/authMiddleware.js";
 
 dotenv.config();
 
@@ -14,6 +16,10 @@ app.use(cors());
 app.use(express.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 
+app.use("/users", authRoute);
+
+// middleware to authenticate token using on productRoute
+app.use(authenticateToken);
 app.use("/products", productRoute);
 
 app.listen(process.env.APP_PORT, () => {
