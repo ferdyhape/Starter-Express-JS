@@ -46,7 +46,7 @@ POST http://localhost:5000/users/register
 Content-Type: application/json
 
 {
-    "email": "ferdyy1945@gmail.com",
+    "email": "ferdy@gmail.com",
     "password": "123456",
     "name": "Ferdy"
 }
@@ -56,7 +56,7 @@ POST http://localhost:5000/users/login
 Content-Type: application/json
 
 {
-    "email": "ferdyy1945@gmail.com",
+    "email": "ferdy@gmail.com",
     "password": "123456"
 }
 
